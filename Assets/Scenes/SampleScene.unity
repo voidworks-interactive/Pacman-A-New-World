@@ -1088,8 +1088,8 @@ GameObject:
   - component: {fileID: 1715937689}
   - component: {fileID: 1715937688}
   - component: {fileID: 1715937687}
-  - component: {fileID: 1715937691}
   - component: {fileID: 1715937692}
+  - component: {fileID: 1715937693}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1193,21 +1193,6 @@ Transform:
   - {fileID: 1617920282}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1715937691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715937686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb696852348128a4180c8cc30567c364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player
-  position: {x: 0, y: 0, z: 0}
-  IShowSpeed: 1
-  inputVector3: {x: 0, y: 0, z: 0}
 --- !u!54 &1715937692
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1216,9 +1201,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715937686}
   serializedVersion: 5
-  m_Mass: 10
+  m_Mass: 2
   m_LinearDamping: 200
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1230,11 +1215,24 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!114 &1715937693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715937686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b075d43e6138c4a8a5ec5cc3b9358d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RigidBodyPlayer
+  IShowSpeed2: 42.4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
