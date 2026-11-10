@@ -13,15 +13,15 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    // el update literamente lo que hace es actualizarse frame por frame, es decir, que se ejecuta muchisimas veces por segundo, dependiendo de la potencia del ordenador
+    // Update runs once per frame, so it may execute many times per second depending on the computer's performance.
     {
         Debug.Log("UPDATE CALLED");
-        // eso lo que hace literal es detectar la entrada del teclado, y dependiendo de la tecla que pulses, te devuelve un valor entre -1 y 1, siendo -1 cuando pulsas la tecla izquierda o abajo, 0 cuando no pulsas nada y 1 cuando pulsas la tecla derecha o arriba
+        // This reads keyboard input and returns a value from -1 to 1: -1 for left or down, 0 for no input, and 1 for right or up.
         inputVector3.x = Input.GetAxis("Horizontal");
-        // hace lo mismo que el x pero en el otro eye asi que verticalmente, es decir, que si pulsas la tecla de arriba te devuelve 1, si pulsas la tecla de abajo te devuelve -1 y si no pulsas nada te devuelve 0
+        // This works like the X axis, but vertically: up returns 1, down returns -1, and no input returns 0.
         inputVector3.y = Input.GetAxis("Vertical");
-        // lo que hace es un evento o una funcion que viene integrada en unity q hace el objeto se mueva
-        transform.Translate(inputVector3.x * IShowSpeed, 0f, inputVector3.y * IShowSpeed); // lo de adentro hace que el objeto se mueva en el eje x y en el eje z, pero no en el eje y, ya que si lo hiciera se moveria hacia arriba y hacia abajo, y eso no es lo que queremos
+        // This built-in Unity function moves the object.
+        transform.Translate(inputVector3.x * IShowSpeed, 0f, inputVector3.y * IShowSpeed); // Move the object along the X and Z axes, not the Y axis, to avoid moving it up and down.
     }
 }
 
