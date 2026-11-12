@@ -29,7 +29,15 @@ public class RigidBodyPlayer : MonoBehaviour
     void FixedUpdate()
      
     {
-        rb.MovePosition(rb.position + movement * IShowSpeed2 * Time.fixedDeltaTime); // Moves the Rigidbody based on the input and speed.
+        rb.linearVelocity = new Vector3(movement.x * IShowSpeed2, rb.linearVelocity.y, movement.z * IShowSpeed2); // Sets horizontal movement speed while preserving vertical velocity.
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground")) // Checks if the object collided with has the tag "Ground".
+        {
+            isGrounded = true; // Sets isGrounded to true to allow jumping again.
+        }
     }
 }
+
 
