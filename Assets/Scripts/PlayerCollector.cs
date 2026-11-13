@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-// Handles item collection behavior for the player.
 public class PlayerCollector : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
